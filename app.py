@@ -263,7 +263,7 @@ def show_source_ingestion():
                         progress.progress(j + 1)
                     st.success("Sync completed!")
     
-    st.subheader("📁 Sample Raw Data")
+    st.subheader("Sample Raw Data")
     
     # Show sample raw data from different sources
     source_tabs = st.tabs(["Northern Trust", "State Street", "FactSet"])
@@ -400,7 +400,7 @@ def show_silver_layer():
     st.dataframe(unified_sample, use_container_width=True)
     
     # Data lineage visualization
-    st.subheader("🔍 Data Lineage & Integration")
+    st.subheader("Data Lineage & Integration")
     
     lineage_data = pd.DataFrame({
         'Fund ID': ['FUND001', 'FUND001', 'FUND002', 'FUND002'],
@@ -708,7 +708,7 @@ def show_business_impact():
             "**Real-time visibility** into plan performance and health",
             "**Automated compliance** reporting and monitoring", 
             "**Cost reduction** through operational efficiency",
-            "🛡**Risk mitigation** through predictive analytics",
+            "**Risk mitigation** through predictive analytics",
             "**Better outcomes** for plan participants"
         ]
         for benefit in benefits:
@@ -717,7 +717,7 @@ def show_business_impact():
     with stakeholder_tabs[1]:
         st.write("**Advisors**")
         benefits = [
-            "⚡ **Faster proposal** generation (hours → minutes)",
+            "**Faster proposal** generation (hours → minutes)",
             "**Personalized recommendations** based on comprehensive data",
             "**Enhanced client** presentations with real-time data",
             "**Automated follow-up** scheduling and reminders",
