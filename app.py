@@ -137,21 +137,21 @@ def main():
     # Header
     st.markdown("""
     <div class="main-header">
-        <h1>🚀 AHUB 2.0 - Analytics Hub Demo</h1>
+        <h1>AHUB 2.0 - Analytics Hub Demo</h1>
         <p>From Spreadsheets to AI: Transforming Retirement Technology</p>
     </div>
     """, unsafe_allow_html=True)
     
     # Sidebar navigation
-    st.sidebar.title("🧭 Navigation")
+    st.sidebar.title("Navigation")
     demo_sections = [
-        "🏠 Overview",
-        "📥 Source Data Ingestion", 
-        "🥉 Bronze Layer - Raw Staging",
-        "🥈 Silver Layer - Data Vault",
-        "🥇 Gold Layer - Business Intelligence",
-        "📊 Real-time Monitoring",
-        "💼 Business Impact"
+        "Overview",
+        "Source Data Ingestion", 
+        "Bronze Layer - Raw Staging",
+        "Silver Layer - Data Vault",
+        "Gold Layer - Business Intelligence",
+        "Real-time Monitoring",
+        "Business Impact"
     ]
     
     selected_section = st.sidebar.selectbox("Select Demo Section:", demo_sections)
@@ -168,37 +168,37 @@ def main():
             st.session_state.data_generated = True
     
     # Section routing
-    if selected_section == "🏠 Overview":
+    if selected_section == "Overview":
         show_overview()
-    elif selected_section == "📥 Source Data Ingestion":
+    elif selected_section == "Source Data Ingestion":
         show_source_ingestion()
-    elif selected_section == "🥉 Bronze Layer - Raw Staging":
+    elif selected_section == "Bronze Layer - Raw Staging":
         show_bronze_layer()
-    elif selected_section == "🥈 Silver Layer - Data Vault":
+    elif selected_section == "Silver Layer - Data Vault":
         show_silver_layer()
-    elif selected_section == "🥇 Gold Layer - Business Intelligence":
+    elif selected_section == "Gold Layer - Business Intelligence":
         show_gold_layer()
-    elif selected_section == "📊 Real-time Monitoring":
+    elif selected_section == "Real-time Monitoring":
         show_monitoring()
-    elif selected_section == "💼 Business Impact":
+    elif selected_section == "Business Impact":
         show_business_impact()
 
 def show_overview():
-    st.header("📋 AHUB 2.0 Architecture Overview")
+    st.header("AHUB 2.0 Architecture Overview")
     
     col1, col2 = st.columns([2, 1])
     
     with col1:
-        st.subheader("🎯 Key Differentiators")
+        st.subheader("Key Differentiators")
         
         differentiators = [
-            ("🔄 Unified Data", "Single source of truth for all retirement data"),
-            ("⚡ Process Automation", "Intelligent workflows that minimize manual intervention"),
-            ("🔮 Predictive Intelligence", "AI that anticipates and prevents issues"),
-            ("👥 Stakeholder Design", "Personalized experiences for each industry stakeholder"),
-            ("🛡️ Compliance Automation", "Proactive monitoring and reporting"),
-            ("🤖 Self-Optimizing Systems", "Systems that learn and improve autonomously"),
-            ("🔗 Seamless Integrations", "Seamless connections to industry platforms")
+            ("Unified Data", "Single source of truth for all retirement data"),
+            ("Process Automation", "Intelligent workflows that minimize manual intervention"),
+            ("Predictive Intelligence", "AI that anticipates and prevents issues"),
+            ("Stakeholder Design", "Personalized experiences for each industry stakeholder"),
+            ("Compliance Automation", "Proactive monitoring and reporting"),
+            ("Self-Optimizing Systems", "Systems that learn and improve autonomously"),
+            ("Seamless Integrations", "Seamless connections to industry platforms")
         ]
         
         for title, description in differentiators:
@@ -213,23 +213,23 @@ def show_overview():
         # Status metrics
         col_a, col_b = st.columns(2)
         with col_a:
-            st.metric("Data Sources", "5", "↗️ +2")
-            st.metric("Data Quality", "96.2%", "↗️ +12%")
+            st.metric("Data Sources", "11", "↗ +2")
+            st.metric("Data Quality", "96.2%", "↗ +12%")
         with col_b:
-            st.metric("Processing Speed", "0.88s", "🔽 -75%")
-            st.metric("Automation", "85%", "↗️ +68%")
+            st.metric("Processing Speed", "0.88s", " -75%")
+            st.metric("Automation", "85%", "↗ +68%")
         
-        st.subheader("🏗️ Architecture Layers")
-        layers = ["🥇 Gold - Business Intelligence", "🥈 Silver - Data Vault", "🥉 Bronze - Raw Staging", "📥 Source Data"]
+        st.subheader("Architecture Layers")
+        layers = ["Gold - Business Intelligence", "Silver - Data Vault", "Bronze - Raw Staging", "Source Data"]
         
         for i, layer in enumerate(layers):
             if i < len(layers) - 1:
-                st.write(f"{layer} ⬇️")
+                st.write(f"{layer} ⬇")
             else:
                 st.write(layer)
 
 def show_source_ingestion():
-    st.header("📥 Source Data Ingestion")
+    st.header("Source Data Ingestion")
     
     st.write("""
     AHUB 2.0 connects to multiple data sources across the retirement ecosystem, 
@@ -284,18 +284,18 @@ def show_source_ingestion():
         st.dataframe(sample_fs, use_container_width=True)
 
 def show_bronze_layer():
-    st.header("🥉 Bronze Layer - Raw Data Staging")
+    st.header("Bronze Layer - Raw Data Staging")
     
     st.markdown("""
     <div class="layer-header">
-        <h4>🎯 Purpose: Initial staging and validation of raw data</h4>
+        <h4>Purpose: Initial staging and validation of raw data</h4>
     </div>
     """, unsafe_allow_html=True)
     
     col1, col2 = st.columns([3, 1])
     
     with col1:
-        st.subheader("📊 Staging Tables Overview")
+        st.subheader("Staging Tables Overview")
         
         # Simulate staging table stats
         staging_stats = pd.DataFrame({
@@ -310,11 +310,11 @@ def show_bronze_layer():
     
     with col2:
         st.subheader("⚡ Performance")
-        st.metric("Avg Processing Time", "0.88s", "🔽 -75%")
-        st.metric("Success Rate", "99.97%", "↗️ +0.12%")
-        st.metric("Data Volume", "5.5GB", "↗️ +15%")
+        st.metric("Avg Processing Time", "0.88s", " -75%")
+        st.metric("Success Rate", "99.97%", "↗ +0.12%")
+        st.metric("Data Volume", "5.5GB", "↗ +15%")
     
-    st.subheader("🔍 Data Validation Results")
+    st.subheader("Data Validation Results")
     
     # Data quality checks
     quality_checks = pd.DataFrame({
@@ -328,7 +328,7 @@ def show_bronze_layer():
     st.dataframe(quality_checks, use_container_width=True)
     
     # Show transformation example
-    st.subheader("🔄 Data Transformation Example")
+    st.subheader("Data Transformation Example")
     
     transformation_tabs = st.tabs(["Before", "After", "Changes"])
     
@@ -363,11 +363,11 @@ def show_bronze_layer():
         st.write("✅ Applied data type validations")
 
 def show_silver_layer():
-    st.header("🥈 Silver Layer - Data Vault")
+    st.header("Silver Layer - Data Vault")
     
     st.markdown("""
     <div class="layer-header">
-        <h4>🎯 Purpose: Unified data integration and business rule application</h4>
+        <h4>Purpose: Unified data integration and business rule application</h4>
     </div>
     """, unsafe_allow_html=True)
     
@@ -375,24 +375,24 @@ def show_silver_layer():
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        st.markdown("### 🥉 Bronze → 🥈 Silver")
+        st.markdown("### Bronze → Silver")
         st.write("✅ Raw data vault created")
         st.write("✅ Business rules applied")
         st.write("✅ Data quality improved")
     
     with col2:
-        st.markdown("### 📊 Integration Stats")
-        st.metric("Sources Unified", "5", "↗️ +2")
-        st.metric("Data Quality", "96.2%", "↗️ +12%")
-        st.metric("Records Matched", "98.7%", "↗️ +8%")
+        st.markdown("### Integration Stats")
+        st.metric("Sources Unified", "5", "↗ +2")
+        st.metric("Data Quality", "96.2%", "↗ +12%")
+        st.metric("Records Matched", "98.7%", "↗ +8%")
     
     with col3:
-        st.markdown("### ⚙️ Business Rules")
+        st.markdown("### Business Rules")
         st.write("✅ Master Data Management")
         st.write("✅ Cross-source validation")
         st.write("✅ Calculated fields added")
     
-    st.subheader("🔗 Data Vault Model")
+    st.subheader("Data Vault Model")
     
     # Show unified data sample
     st.write("**Unified Fund Data (Business Data Vault)**")
@@ -413,7 +413,7 @@ def show_silver_layer():
     st.dataframe(lineage_data, use_container_width=True)
     
     # Show data quality improvements
-    st.subheader("📈 Data Quality Improvements")
+    st.subheader("Data Quality Improvements")
     
     # Create before/after quality comparison
     quality_comparison = pd.DataFrame({
@@ -431,16 +431,16 @@ def show_silver_layer():
     st.plotly_chart(fig, use_container_width=True)
 
 def show_gold_layer():
-    st.header("🥇 Gold Layer - Business Intelligence")
+    st.header("Gold Layer - Business Intelligence")
     
     st.markdown("""
     <div class="layer-header">
-        <h4>🎯 Purpose: Business-ready data for analytics and reporting</h4>
+        <h4>Purpose: Business-ready data for analytics and reporting</h4>
     </div>
     """, unsafe_allow_html=True)
     
     # Key metrics dashboard
-    st.subheader("📊 Executive Dashboard")
+    st.subheader("Executive Dashboard")
     
     col1, col2, col3, col4 = st.columns(4)
     
@@ -451,16 +451,16 @@ def show_gold_layer():
     quality_score = st.session_state.unified_data['data_quality_score'].mean()
     
     with col1:
-        st.metric("Total AUM", f"${total_aum:.1f}B", "↗️ +5.2%")
+        st.metric("Total AUM", f"${total_aum:.1f}B", "↗ +5.2%")
     with col2:
-        st.metric("Avg NAV", f"${avg_nav:.2f}", "↗️ +0.8%")
+        st.metric("Avg NAV", f"${avg_nav:.2f}", "↗ +0.8%")
     with col3:
-        st.metric("Avg Risk Score", f"{avg_risk:.1f}/10", "🔽 -0.3")
+        st.metric("Avg Risk Score", f"{avg_risk:.1f}/10", " -0.3")
     with col4:
-        st.metric("Data Quality", f"{quality_score:.1f}%", "↗️ +2.1%")
+        st.metric("Data Quality", f"{quality_score:.1f}%", "↗ +2.1%")
     
     # Fund performance visualization
-    st.subheader("📈 Fund Performance Analysis")
+    st.subheader("Fund Performance Analysis")
     
     # Create performance chart
     daily_performance = st.session_state.unified_data.groupby(['date', 'fund_id']).agg({
@@ -478,7 +478,7 @@ def show_gold_layer():
     col1, col2 = st.columns(2)
     
     with col1:
-        st.subheader("🎯 Risk Distribution")
+        st.subheader("Risk Distribution")
         risk_dist = st.session_state.unified_data.groupby('fund_id')['risk_score'].mean().reset_index()
         
         fig_risk = px.bar(risk_dist, x='fund_id', y='risk_score',
@@ -489,7 +489,7 @@ def show_gold_layer():
         st.plotly_chart(fig_risk, use_container_width=True)
     
     with col2:
-        st.subheader("💰 Asset Allocation")
+        st.subheader("Asset Allocation")
         asset_allocation = st.session_state.unified_data.groupby('fund_id')['total_net_assets'].sum().reset_index()
         
         fig_assets = px.pie(asset_allocation, values='total_net_assets', names='fund_id',
@@ -498,7 +498,7 @@ def show_gold_layer():
         st.plotly_chart(fig_assets, use_container_width=True)
     
     # Automated reports section
-    st.subheader("📄 Automated Reports")
+    st.subheader("Automated Reports")
     
     report_tabs = st.tabs(["Daily Summary", "Risk Report", "Compliance Check"])
     
@@ -520,7 +520,7 @@ def show_gold_layer():
         # Risk alerts
         high_risk_funds = st.session_state.unified_data[st.session_state.unified_data['risk_score'] > 7]
         if not high_risk_funds.empty:
-            st.warning(f"⚠️ {len(high_risk_funds)} funds showing elevated risk levels")
+            st.warning(f" {len(high_risk_funds)} funds showing elevated risk levels")
             st.dataframe(high_risk_funds[['fund_id', 'risk_score', 'date']].head(), use_container_width=True)
         else:
             st.success("✅ All funds within acceptable risk parameters")
@@ -537,11 +537,11 @@ def show_gold_layer():
         st.dataframe(compliance_checks, use_container_width=True)
 
 def show_monitoring():
-    st.header("📊 Real-time Monitoring & Alerts")
+    st.header("Real-time Monitoring & Alerts")
     
     st.markdown("""
     <div class="layer-header">
-        <h4>🎯 Purpose: Proactive monitoring and self-optimizing systems</h4>
+        <h4>Purpose: Proactive monitoring and self-optimizing systems</h4>
     </div>
     """, unsafe_allow_html=True)
     
@@ -549,25 +549,25 @@ def show_monitoring():
     col1, col2, col3 = st.columns(3)
     
     with col1:
-        st.subheader("🖥️ System Health")
-        st.metric("Uptime", "99.97%", "↗️ +0.02%")
-        st.metric("Response Time", "0.88s", "🔽 -0.45s")
-        st.metric("Throughput", "1.2M rec/hr", "↗️ +15%")
+        st.subheader("System Health")
+        st.metric("Uptime", "99.97%", "↗ +0.02%")
+        st.metric("Response Time", "0.88s", " -0.45s")
+        st.metric("Throughput", "1.2M rec/hr", "↗ +15%")
     
     with col2:
-        st.subheader("🔄 Pipeline Status")
+        st.subheader(" Pipeline Status")
         st.metric("Active Pipelines", "12", "→ 0")
-        st.metric("Success Rate", "99.8%", "↗️ +0.3%")
-        st.metric("Avg Processing", "2.1 min", "🔽 -30s")
+        st.metric("Success Rate", "99.8%", "↗ +0.3%")
+        st.metric("Avg Processing", "2.1 min", " -30s")
     
     with col3:
-        st.subheader("🛡️ Security & Compliance")
+        st.subheader("Security & Compliance")
         st.metric("Access Violations", "0", "→ 0")
         st.metric("Data Leakage Alerts", "0", "→ 0")
-        st.metric("Compliance Score", "98.5%", "↗️ +1.2%")
+        st.metric("Compliance Score", "98.5%", "↗ +1.2%")
     
     # Real-time alerts
-    st.subheader("🚨 Active Alerts & Notifications")
+    st.subheader("Active Alerts & Notifications")
     
     # Simulate real-time alerts
     alerts_data = pd.DataFrame({
@@ -596,7 +596,7 @@ def show_monitoring():
     st.dataframe(styled_alerts, use_container_width=True)
     
     # Data quality monitoring
-    st.subheader("📈 Data Quality Trends")
+    st.subheader("Data Quality Trends")
     
     # Generate quality trend data
     dates = pd.date_range(start='2024-01-01', end='2024-01-15', freq='D')
@@ -615,7 +615,7 @@ def show_monitoring():
     st.plotly_chart(fig_quality, use_container_width=True)
     
     # Predictive alerts
-    st.subheader("🔮 Predictive Intelligence")
+    st.subheader("Predictive Intelligence")
     
     col1, col2 = st.columns(2)
     
@@ -649,37 +649,37 @@ def show_monitoring():
         st.dataframe(optimizations, use_container_width=True)
 
 def show_business_impact():
-    st.header("💼 Business Impact & ROI")
+    st.header("Business Impact & ROI")
     
     st.markdown("""
     <div class="layer-header">
-        <h4>🎯 Purpose: Demonstrating tangible business value and competitive advantage</h4>
+        <h4>Purpose: Demonstrating tangible business value and competitive advantage</h4>
     </div>
     """, unsafe_allow_html=True)
     
     # ROI Metrics
-    st.subheader("💰 Return on Investment")
+    st.subheader("Return on Investment")
     
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
-        st.metric("Time Savings", "75%", "↗️ Manual → Auto")
+        st.metric("Time Savings", "75%", "↗ Manual → Auto")
         st.write("*Process automation*")
     
     with col2:
-        st.metric("Error Reduction", "88%", "🔽 Data inconsistencies")
+        st.metric("Error Reduction", "88%", " Data inconsistencies")
         st.write("*Quality improvements*")
     
     with col3:
-        st.metric("Faster Insights", "10x", "↗️ Hours → Minutes")
+        st.metric("Faster Insights", "10x", "↗ Hours → Minutes")
         st.write("*Real-time analytics*")
     
     with col4:
-        st.metric("Cost Reduction", "$2.1M", "🔽 Annual savings")
+        st.metric("Cost Reduction", "$2.1M", " Annual savings")
         st.write("*Operational efficiency*")
     
     # Before vs After comparison
-    st.subheader("📊 Before vs After AHUB 2.0")
+    st.subheader("Before vs After AHUB 2.0")
     
     comparison_data = pd.DataFrame({
         'Metric': [
@@ -698,18 +698,18 @@ def show_business_impact():
     st.dataframe(comparison_data, use_container_width=True)
     
     # Stakeholder benefits
-    st.subheader("👥 Stakeholder Benefits")
+    st.subheader("Stakeholder Benefits")
     
     stakeholder_tabs = st.tabs(["Plan Sponsors", "Advisors", "Participants", "Operations"])
     
     with stakeholder_tabs[0]:
         st.write("**Plan Sponsors**")
         benefits = [
-            "🔍 **Real-time visibility** into plan performance and health",
-            "📊 **Automated compliance** reporting and monitoring", 
-            "💰 **Cost reduction** through operational efficiency",
-            "🛡️ **Risk mitigation** through predictive analytics",
-            "📈 **Better outcomes** for plan participants"
+            "**Real-time visibility** into plan performance and health",
+            "**Automated compliance** reporting and monitoring", 
+            "**Cost reduction** through operational efficiency",
+            "🛡**Risk mitigation** through predictive analytics",
+            "**Better outcomes** for plan participants"
         ]
         for benefit in benefits:
             st.markdown(benefit)
@@ -718,10 +718,10 @@ def show_business_impact():
         st.write("**Advisors**")
         benefits = [
             "⚡ **Faster proposal** generation (hours → minutes)",
-            "🎯 **Personalized recommendations** based on comprehensive data",
-            "📊 **Enhanced client** presentations with real-time data",
-            "🔄 **Automated follow-up** scheduling and reminders",
-            "💡 **Predictive insights** for proactive client management"
+            "**Personalized recommendations** based on comprehensive data",
+            "**Enhanced client** presentations with real-time data",
+            "**Automated follow-up** scheduling and reminders",
+            "**Predictive insights** for proactive client management"
         ]
         for benefit in benefits:
             st.markdown(benefit)
@@ -729,11 +729,11 @@ def show_business_impact():
     with stakeholder_tabs[2]:
         st.write("**Plan Participants**")
         benefits = [
-            "📱 **Real-time account** information and updates",
-            "🎯 **Personalized retirement** planning recommendations",
-            "📊 **Clear, visual** performance tracking",
-            "🔔 **Proactive notifications** about important changes",
-            "💼 **Seamless experience** across all touchpoints"
+            "**Real-time account** information and updates",
+            "**Personalized retirement** planning recommendations",
+            "**Clear, visual** performance tracking",
+            "**Proactive notifications** about important changes",
+            "**Seamless experience** across all touchpoints"
         ]
         for benefit in benefits:
             st.markdown(benefit)
@@ -741,17 +741,17 @@ def show_business_impact():
     with stakeholder_tabs[3]:
         st.write("**Operations Teams**")
         benefits = [
-            "🤖 **85% automation** of manual processes",
-            "🔍 **Proactive issue** detection and resolution",
-            "📈 **Improved data quality** and consistency",
-            "⚡ **Faster processing** and reduced latency",
-            "🛡️ **Enhanced security** and compliance monitoring"
+            "**85% automation** of manual processes",
+            "**Proactive issue** detection and resolution",
+            "**Improved data quality** and consistency",
+            "**Faster processing** and reduced latency",
+            "**Enhanced security** and compliance monitoring"
         ]
         for benefit in benefits:
             st.markdown(benefit)
     
     # Competitive advantages
-    st.subheader("🏆 Competitive Advantages")
+    st.subheader("Competitive Advantages")
     
     col1, col2 = st.columns(2)
     
@@ -782,7 +782,7 @@ def show_business_impact():
             st.write(solution)
     
     # Future roadmap
-    st.subheader("🚀 Future Roadmap")
+    st.subheader("Future Roadmap")
     
     roadmap_data = pd.DataFrame({
         'Quarter': ['Q2 2025', 'Q3 2025', 'Q4 2025', 'Q1 2026'],
@@ -805,12 +805,11 @@ def show_business_impact():
     # Call to action
     st.markdown("""
     ---
-    ### 🎯 Ready to Transform Your Retirement Technology?
+    ### Ready to Transform Your Retirement Technology?
     
     **AHUB 2.0 represents the future of retirement data management** - moving from reactive spreadsheets 
     to proactive, AI-powered intelligence that drives better outcomes for everyone in the ecosystem.
     
-    **Contact us to learn more about implementing AHUB 2.0 for your organization.**
     """)
 
 if __name__ == "__main__":
