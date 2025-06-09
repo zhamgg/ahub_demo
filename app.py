@@ -10,7 +10,7 @@ import random
 
 # Page configuration
 st.set_page_config(
-    page_title="AHUB 2.0 - Analytics Hub Demo",
+    page_title="AHUB: Analytics Hub Demo",
     page_icon="📊",
     layout="wide",
     initial_sidebar_state="expanded"
