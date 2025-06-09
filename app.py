@@ -137,7 +137,7 @@ def main():
     # Header
     st.markdown("""
     <div class="main-header">
-        <h1>AHUB 2.0 - Analytics Hub Demo</h1>
+        <h1>AHUB: Analytics Hub Demo</h1>
         <p>From Spreadsheets to AI: Transforming Retirement Technology</p>
     </div>
     """, unsafe_allow_html=True)
@@ -184,7 +184,7 @@ def main():
         show_business_impact()
 
 def show_overview():
-    st.header("AHUB 2.0 Architecture Overview")
+    st.header("AHUB Architecture Overview")
     
     col1, col2 = st.columns([2, 1])
     
@@ -807,7 +807,7 @@ def show_business_impact():
     ---
     ### Ready to Transform Your Retirement Technology?
     
-    **AHUB 2.0 represents the future of retirement data management** - moving from reactive spreadsheets 
+    **AHUB represents the future of retirement data management** - moving from reactive spreadsheets 
     to proactive, AI-powered intelligence that drives better outcomes for everyone in the ecosystem.
     
     """)
